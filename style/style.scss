@@ -28,8 +28,69 @@ section {
     margin-bottom: 8em;
 }
 
-nav {
+.nav-cont {
     display: none;
+}
+
+.nav--open {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 80vw;
+        background-color: #0A0A0A;
+        padding-inline: 1rem;
+        padding-top: 1rem;
+
+        .mobile-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            margin-right: -0.5rem;
+            margin-bottom: 2em;
+            cursor: pointer;
+
+            svg {
+                height: 1.5rem;
+                fill: #FFFFFF;
+            }
+
+            &:hover {
+                background-color: #3e3d3d;
+            }
+        }
+
+        li {
+            margin-bottom: 2em;
+        }
+
+        a {
+            color: #FFFFFF;
+            font-size: 1.2rem;
+            padding-block: 0.5rem;
+            padding-left: 0.5rem;
+
+            &:hover {
+                color: #acaaaa;
+            }
+        }
+    }
 }
 
 ul {
@@ -40,10 +101,36 @@ a {
     text-decoration: none;
 }
 
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
     color: #F16B4C;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: -0.5rem;
+    cursor: pointer;
+
+    svg {
+        height: 1.5rem;
+        fill: #FFFFFF;
+    }
+
+    &:hover {
+        background-color: #3e3d3d;
+    }
 }
 
 h3 {
@@ -366,6 +453,12 @@ footer {
 @media (min-width: 38em) {
     .wrapper {
         margin-inline: 2em;
+    }
+
+    .nav--open {
+        nav {
+            padding-inline: 2em;
+        }
     }
 }
 
