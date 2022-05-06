@@ -455,9 +455,63 @@ footer {
         margin-inline: 2em;
     }
 
-    .nav--open {
+    .mobile-menu {
+        display: none;
+    }
+
+    .nav-cont,
+    .nav-open {
+        display: block;
+        position: relative;
+        flex-direction: row;
+        background-color: unset;
+
+
         nav {
-            padding-inline: 2em;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            padding-inline: 0;
+            padding-top: 0;
+            width: 100%;
+            background-color: unset;
+
+
+            .mobile-close {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                gap: 2em;
+
+                li {
+                    margin-bottom: 0;
+                }
+
+                .nav-normal {
+                    font-size: 1rem;
+                    color: #FFFFFF;
+
+                    &:hover {
+                        color: #acaaaa;
+                    }
+                }
+
+                .nav-pri {
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    padding-block: 0.3rem;
+                    padding-inline: 1rem;
+                    border-radius: 15rem;
+
+                    &:hover {
+                        color: #1F1F1F;
+                        background-color: #FFFFFF;
+                    }
+                }
+            }
         }
     }
 }

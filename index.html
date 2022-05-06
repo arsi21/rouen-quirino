@@ -33,10 +33,11 @@
                     </div>
 
                     <ul>
-                        <li><a class="nav-normal" href=""> Home</a></li>
-                        <li><a class="nav-normal" href="">Skills</a></li>
-                        <li><a class="nav-normal" href="">Projects</a></li>
-                        <li><a class="nav-pri" href="">Resume</a></li>
+                        <li><a id="home-btn" class="nav-normal" href="#home"> Home</a></li>
+                        <li><a id="skills-btn" class="nav-normal" href="#skills">Skills</a></li>
+                        <li><a id="projects-btn" class="nav-normal" href="#projects">Projects</a></li>
+                        <li><a id="resume-btn" class="nav-pri" href="documents/rouen-quirino.pdf" target="_blank"
+                                download="rouen-quirino">Resume</a></li>
                     </ul>
                 </nav>
             </div>
@@ -287,6 +288,10 @@
         const closeBtn = document.getElementById("close-btn");
         const navCont = document.getElementById("nav-cont");
         const nav = document.getElementById("nav");
+        const homeBtn = document.getElementById("home-btn");
+        const skillsBtn = document.getElementById("skills-btn");
+        const projectsBtn = document.getElementById("projects-btn");
+        const resumeBtn = document.getElementById("resume-btn");
 
         menuBtn.addEventListener('click', () => {
             navCont.classList.toggle("nav--open");
@@ -296,13 +301,26 @@
             navCont.classList.toggle("nav--open");
         });
 
+        homeBtn.addEventListener('click', () => {
+            navCont.classList.toggle("nav--open");
+        });
+
+        skillsBtn.addEventListener('click', () => {
+            navCont.classList.toggle("nav--open");
+        });
+
+        projectsBtn.addEventListener('click', () => {
+            navCont.classList.toggle("nav--open");
+        });
+
+        resumeBtn.addEventListener('click', () => {
+            navCont.classList.toggle("nav--open");
+        });
+
         navCont.addEventListener('click', (e) => {
             if (!nav.contains(e.target)) {
-                console.log(e);
                 navCont.classList.toggle("nav--open");
             }
-            //console.log(e);
-
         });
     </script>
 </body>

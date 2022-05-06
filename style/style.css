@@ -402,8 +402,62 @@ footer .footer-lbl {
     margin-inline: 2em;
   }
 
-  .nav--open nav {
-    padding-inline: 2em;
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-cont,
+.nav-open {
+    display: block;
+    position: relative;
+    flex-direction: row;
+    background-color: unset;
+  }
+  .nav-cont nav,
+.nav-open nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-inline: 0;
+    padding-top: 0;
+    width: 100%;
+    background-color: unset;
+  }
+  .nav-cont nav .mobile-close,
+.nav-open nav .mobile-close {
+    display: none;
+  }
+  .nav-cont nav ul,
+.nav-open nav ul {
+    display: flex;
+    gap: 2em;
+  }
+  .nav-cont nav ul li,
+.nav-open nav ul li {
+    margin-bottom: 0;
+  }
+  .nav-cont nav ul .nav-normal,
+.nav-open nav ul .nav-normal {
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+  .nav-cont nav ul .nav-normal:hover,
+.nav-open nav ul .nav-normal:hover {
+    color: #acaaaa;
+  }
+  .nav-cont nav ul .nav-pri,
+.nav-open nav ul .nav-pri {
+    font-size: 1rem;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding-block: 0.3rem;
+    padding-inline: 1rem;
+    border-radius: 15rem;
+  }
+  .nav-cont nav ul .nav-pri:hover,
+.nav-open nav ul .nav-pri:hover {
+    color: #1F1F1F;
+    background-color: #FFFFFF;
   }
 }
 @media (min-width: 60em) {
